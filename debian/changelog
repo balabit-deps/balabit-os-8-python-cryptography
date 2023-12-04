@@ -1,3 +1,13 @@
+python-cryptography (2.8-3ubuntu0.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: corrupted output via immutable objects
+    - debian/patches/CVE-2023-23931.patch: don't allow update_into to
+      mutate immutable objects in tests/hazmat/primitives/test_ciphers.py,
+      src/cryptography/hazmat/backends/openssl/ciphers.py.
+    - CVE-2023-23931
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 04 Dec 2023 15:04:00 -0500
+
 python-cryptography (2.8-3ubuntu0.1) focal-security; urgency=medium
 
   * SECURITY UPDATE: Bleichenbacher timing oracle attack
