@@ -1,3 +1,14 @@
+python-cryptography (2.8-3ubuntu0.3) focal-security; urgency=medium
+
+  * SECURITY UPDATE: exposure of confidential data
+    - debian/patches/CVE-2023-50782.patch: update bindings in
+      src/_cffi_src/openssl/rsa.py to be compatible with new openssl version
+      31.1.1f-1ubuntu2.22, which fixes the issue by changing PKCS#1 v1.5 RSA to 
+      return random output instead of an exception when detecting wrong padding
+    - CVE-2023-50782 
+
+ -- Jorge Sancho Larraz <jorge.sancho.larraz@canonical.com>  Thu, 29 Feb 2024 11:30:05 +0100
+
 python-cryptography (2.8-3ubuntu0.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: corrupted output via immutable objects
